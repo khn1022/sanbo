@@ -1,0 +1,184 @@
+<h2 class="page-header">보안상태 평가</h2>
+<div class="form-group row">
+	<label for="search" class="col-sm-2 col-form-label"></label>
+	<div class="col-sm-2">
+		<select class="form-control" name="type">
+			<option selected>전체</option>
+			<option value="1">자산명</option>
+			<option value="2">자산속성</option>
+			<option value="3">자산유형</option>
+		</select>
+	</div>
+	<div class="col-sm-5">
+		<input type="text" class="form-control" id="inputAsset" placeholder="내용을 입력하세요.">
+	</div>
+	<div class="col-sm-1">
+		<button type="button" class="btn btn-secondary" id="#">검색</button>
+	</div>
+	<div class="col-sm-1">
+		<button type="button" class="btn btn-primary" id="evaluationButton">평가 시작</button>
+	</div>
+</div>
+	
+<div class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+		</div>
+	</div>
+</div>
+	
+	
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>자산명</th>
+				<th>자산 속성</th>
+                <th>자산 유형</th>
+                <th>운영체제</th>
+				<th>활성 상태</th>
+                <th>조치 여부</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Asset1</td>
+				<td>Security</td>
+                <td>기록계</td>
+                <td>범용OS</td>
+				<td>활성</td>
+				<td><span class="badge badge-warning">incomplete</span></td>
+            </tr>
+            <tr>
+                <td>Asset2</td>
+				<td>Security</td>
+                <td>PLC</td>
+                <td>전용OS</td>
+				<td>활성</td>
+				<td><span class="badge badge-warning">incomplete</span></td>
+            </tr>
+            <tr>
+                <td>Asset3</td>
+				<td>Safety</td>
+                <td>PC</td>
+                <td>범용OS</td>
+				<td>활성</td>
+				<td><span class="badge badge-success">complete</span></td>
+            </tr>
+            <tr>
+                <td>Asset4</td>
+				<td>Security</td>
+                <td>서버류</td>
+                <td>범용OS</td>
+				<td>활성</td>
+				<td><span class="badge badge-success">complete</span></td>
+            </tr>
+            <tr>
+                <td>Asset5</td>
+				<td>Safety</td>
+                <td>전송기</td>
+                <td>기타</td>
+				<td>활성</td>
+				<td><span class="badge badge-warning">incomplete</span></td>
+            </tr>
+            <tr>
+                <td>Asset6</td>
+				<td>Safety</td>
+                <td>DCS</td>
+                <td>범용OS</td>
+				<td>활성</td>
+				<td><span class="badge badge-warning">incomplete</span></td>
+            </tr>
+            <tr>
+                <td>Asset7</td>
+				<td>Security</td>
+                <td>기타</td>
+                <td>전용OS</td>
+				<td>활성</td>
+				<td><span class="badge badge-warning">incomplete</span></td>
+            </tr>
+            <tr>
+                <td>Asset8</td>
+				<td>Security</td>
+                <td>서버류</td>
+                <td>펌웨어</td>
+				<td>활성</td>
+				<td><span class="badge badge-success">complete</span></td>
+            </tr>
+            <tr>
+                <td>Asset9</td>
+				<td>Safety</td>
+                <td>PC</td>
+                <td>펌웨어</td>
+				<td>활성</td>
+				<td><span class="badge badge-success">complete</span></td>
+            </tr>
+            <tr>
+                <td>Asset10</td>
+				<td>Security</td>
+                <td>PC</td>
+                <td>전용OS</td>
+				<td>활성</td>
+				<td><span class="badge badge-warning">incomplete</span></td>
+            </tr>
+            <tr>
+                <td>Asset11</td>
+				<td>Safety</td>
+                <td>기록계</td>
+                <td>펌웨어</td>
+				<td>활성</td>
+				<td><span class="badge badge-warning">incomplete</span></td>
+            </tr>
+            <tr>
+                <td>Asset12</td>
+				<td>Safety</td>
+                <td>기록계</td>
+                <td>전용OS</td>
+				<td>활성</td>
+				<td><span class="badge badge-warning">incomplete</span></td>
+            </tr>
+            <tr class="unactive">
+                <td>Asset13</td>
+				<td>Safety</td>
+                <td>PLC</td>
+                <td>범용OS</td>
+				<td>비활성</td>
+				<td></td>
+            </tr>
+            <tr class="unactive">
+                <td>Asset14</td>
+				<td>Security</td>
+                <td>기타</td>
+                <td>펌웨어</td>
+				<td>비활성</td>
+				<td></td>
+            </tr>
+            <tr class="unactive">
+                <td>Asset15</td>
+				<td>Security</td>
+                <td>DCS</td>
+                <td>전용OS</td>
+				<td>비활성</td>
+				<td></td>
+            </tr>
+            <tr class="unactive">
+                <td>Asset16</td>
+				<td>Safety</td>
+                <td>기타</td>
+                <td>기타</td>
+				<td>비활성</td>
+				<td></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<script type="text/javascript">
+  $(function(){
+    $("#evaluationButton").click(function(){
+      $('div.modal').modal({
+        remote : 'articles/section1/evaluate.html'
+      });
+    })
+  })
+</script>

@@ -1,0 +1,118 @@
+<div class="modal-header">
+	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		<span aria-hidden="true">&times;</span>
+	</button>
+ 	<h3 class="modal-title" id="addAssetLabel">통제항목 등록</h3>
+</div>
+
+<div class="modal-body">
+	<div class="container-fluid">
+		<div class="form-row">
+			<div class="form-group col-md-6">
+				<label for="major">대분류</label>
+				<select class="form-control" name="major">
+					<option selected>-Select-</option>
+					<option value="1">A.1</option>
+					<option value="2">A.2</option>
+				</select>
+			</div>
+			<div class="form-group col-md-6">
+				<label for="majorName">대분류명</label>
+				<input type="text" class="form-control" name="majorName" placeholder="">
+			</div>
+		</div>
+		<div class="form-row">
+			<div class="form-group col-md-6">
+				<label for="minor">소분류</label>
+				<input type="text" class="form-control" name="minor" placeholder="A.2.X">
+			</div>
+			<div class="form-group col-md-6">
+				<label for="minorName">소분류명</label>
+				<input type="text" class="form-control" name="minorName" placeholder="">
+			</div>
+		</div>
+		
+		<div class="form-row"><div class="form-group col-md-12"></div></div>
+		<div class="form-row">
+			<div class="form-group col-md-3">
+				<label for="os">SW 기능</label>
+			</div>
+			<div class="form-check col-md-3 form-check-inline">
+				<input class="form-check-input" type="checkbox" id="swCheckbox1" value="option1">
+				<label class="form-check-label" for="swCheckbox1">계정 관리</label>
+			</div>
+			<div class="form-check col-md-3 form-check-inline">
+				<input class="form-check-input" type="checkbox" id="swCheckbox2" value="option2">
+				<label class="form-check-label" for="swCheckbox2">암호 정책</label>
+			</div>
+			<div class="form-check col-md-3 form-check-inline">
+				<input class="form-check-input" type="checkbox" id="swCheckbox3" value="option3">
+				<label class="form-check-label" for="swCheckbox3">계정잠금 정책</label>
+			</div>
+			<div class="form-check col-md-3 form-check-inline">
+				<input class="form-check-input" type="checkbox" id="swCheckbox4" value="option3">
+				<label class="form-check-label" for="swCheckbox4">감사 정책</label>
+			</div>
+			<div class="form-check col-md-3 form-check-inline">
+				<input class="form-check-input" type="checkbox" id="swCheckbox5" value="option3">
+				<label class="form-check-label" for="swCheckbox5">통신 암호화</label>
+			</div>
+				<div class="form-check col-md-3 form-check-inline">
+				<input class="form-check-input" type="checkbox" id="swCheckbox6" value="option3">
+				<label class="form-check-label" for="swCheckbox6">파일 공유</label>
+			</div>
+			<div class="form-check col-md-3 form-check-inline"></div>
+			<div class="form-check col-md-3 form-check-inline">
+				<input class="form-check-input" type="checkbox" id="swCheckbox7" value="option3">
+				<label class="form-check-label" for="swCheckbox7">원격 설정</label>
+			</div>
+			<div class="form-check col-md-3 form-check-inline">
+				<input class="form-check-input" type="checkbox" id="swCheckbox8" value="option3">
+				<label class="form-check-label" for="swCheckbox8">시간 동기화</label>
+			</div>
+			<div class="form-check col-md-3 form-check-inline">
+				<input class="form-check-input" type="checkbox" id="swCheckbox9" value="option3">
+				<label class="form-check-label" for="swCheckbox9">CMOS/BIOS</label>
+			</div>
+		</div>
+		<div class="form-row"><div class="form-group col-md-12"></div></div>
+		<div class="form-row">
+			<div class="form-group col-md-3">
+				<label for="os">HW 속성</label>
+			</div>
+			<div class="form-check col-md-3 form-check-inline">
+				<input class="form-check-input" type="checkbox" id="hwCheckbox1" value="option1">
+				<label class="form-check-label" for="hwCheckbox1">ROM</label>
+			</div>
+			<div class="form-check col-md-3 form-check-inline">
+				<input class="form-check-input" type="checkbox" id="hwCheckbox2" value="option2">
+				<label class="form-check-label" for="hwCheckbox2">Flash MM</label>
+			</div>
+			<div class="form-check col-md-3 form-check-inline">
+				<input class="form-check-input" type="checkbox" id="hwCheckbox3" value="option3">
+				<label class="form-check-label" for="hwCheckbox3">HDD</label>
+			</div>
+			<div class="form-check col-md-3 form-check-inline">
+				<input class="form-check-input" type="checkbox" id="hwCheckbox1" value="option1">
+				<label class="form-check-label" for="hwCheckbox1">시리얼 통신</label>
+			</div>
+			<div class="form-check col-md-3 form-check-inline">
+				<input class="form-check-input" type="checkbox" id="hwCheckbox2" value="option2">
+				<label class="form-check-label" for="hwCheckbox2">TCP/IP</label>
+			</div>
+			<div class="form-check col-md-3 form-check-inline">
+				<input class="form-check-input" type="checkbox" id="hwCheckbox3" value="option3">
+				<label class="form-check-label" for="hwCheckbox3">기타</label>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal-footer">
+	<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+	<button type="button" class="btn btn-secondary" data-dismiss="modal" id="addAssetButton">Save</button>
+	<!--<button type="button" class="btn btn-primary" id="addAssetButton">Save</button>-->
+</div>
+
+
+<div class="alerts"></div>
